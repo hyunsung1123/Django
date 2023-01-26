@@ -89,9 +89,6 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'home.html')
 ```
-### ♻️ django의 흐름
-<img src="./img/flow.png">
-
 ### 🙈 django .gitignore
 ```
 *.pyc
@@ -102,10 +99,11 @@ db.sqlite3
 /static
 .DS_Store
 ```
+### 현재 구현한 기능
+1. 게시물 작성
 
-### pybo
-- main page
-<img src="./img/main.PNG">
+<img width="1394" alt="스크린샷 2023-01-26 오후 4 17 10" src="https://user-images.githubusercontent.com/88260430/214778031-206685d8-c7a2-46bb-90a8-cc35d2469821.png">
 
-- detail page
-<img src="./img/detail.PNG">
+2. 댓글 작성
+<img width="1396" alt="스크린샷 2023-01-26 오후 4 17 44" src="https://user-images.githubusercontent.com/88260430/214778122-d82ed904-712a-46f9-9f72-b72bc29d22ec.png">
+
