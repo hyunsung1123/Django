@@ -12,7 +12,7 @@ python -m venv [가상환경이름]
 . myvenv/Scripts/activate
 ```
 ```
-deactivate -> 
+deactivate -> 가상환경 비활성화
 ```
 ### 3. django 다운로드 하기
 ```
