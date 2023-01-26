@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container my-3">
+        <h1>DB에 작성된 글 목록</h1>
+        <table class="table">
+            <thead>
+            <tr class="table-dark">
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성일시</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% if answer_list %}
+            {% for answer in answer_list %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>
+                    <a href="{% url 'detail' answer.id %}">{{ answer.title }}</a>
+                </td>
+                <td>{{ answer.create_date |date:"Y-m-d D P"}}</td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <tr>
+                <td colspan="3">질문이 없습니다.</td>
+            </tr>
+            {% endif %}
+            </tbody>
+        </table>
+    </div>
+    <div style="position: relative; left:1250px;"><button><a href="{%url 'answer_create' %}">게시물 등록하기</a></button></div>
+    <div style="position: relative; top: 30px; left:1200px;"><a href="{% url 'index1' %}"><저장된 BookMark목록 확인하기></a></div>
+    {% endblock %}
+</body>
+</html>
